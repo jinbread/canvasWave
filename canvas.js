@@ -34,7 +34,7 @@ function Wave(frequency, amplitude) {
     c.moveTo(0, innerHeight);
     for (var x = 0; x < innerWidth; x++) {
       y = Math.sin(x * frequency + phi) * amplitude / 2 + amplitude / 2;
-      c.lineTo(x, y + 300); // 40 = offset
+      c.lineTo(x, y + innerHeight / 2); // 40 = offset
     }
     c.lineTo(innerWidth, innerHeight);
     c.lineTo(0, innerHeight);
@@ -56,7 +56,7 @@ function init() {
 
   for (var i = 1; i < 4; i++){
     var frequency = 0.0005 * i;
-    var amplitude = 100 * i;
+    var amplitude = 150 * i;
 
     waveArray.push(new Wave(frequency, amplitude));
   }
